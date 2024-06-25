@@ -1,0 +1,144 @@
+:root{
+    /* Colors */
+    --clr-cyan: 193 38% 86%;
+    --clr-green: 150 100% 66%;
+    --clr-gray: 217 19% 38%;
+    --clr-secondary: 217 19% 24%;
+    --clr-primary: 218 23% 16%;
+
+    /* Font-Family */
+    --ff-primary: "Manrope", sans-serif;
+
+    /* Font-sizes */
+    --fs-100: 1rem;
+    --fs-200: 1.75rem;
+
+    /* Font-weight */
+    --fw-800: 700;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+p
+ {
+  margin: 0;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+body{
+    display: grid;
+    place-content: center;
+    font-family: var(--ff-primary);
+    font-size: var(--fs-100);
+    background-color: hsl(var(--clr-primary));
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  justify-content: center;
+  align-items: center;
+}
+.container{
+  padding-block: 2rem;
+  width: min(95%, 30rem);
+  margin-inline: auto;
+  border-radius: 10px;
+  position: relative;
+}
+.inner-container{
+  padding: 1.5rem;
+  text-align: center;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.advice-id{
+  letter-spacing: 5px;
+}
+.bg-secondary{
+  background: hsl(var(--clr-secondary));
+}
+.bg-green{
+  background: hsl(var(--clr-green));
+}
+.text-gray{
+  color: hsl(var(--clr-gray));
+}
+.text-green{
+  color: hsl(var(--clr-green));
+}
+.text-cyan{
+  color: hsl(var(--clr-cyan));
+}
+.fs-100{
+  font-size: var(--fs-100)
+}
+.fs-200{
+  font-size: var(--fs-200);
+}
+.fw-800{
+  font-weight: var(--fw-800);
+}
+.quote{
+  max-width: 20ch;
+}
+.pause-desktop{
+  display: none;
+}
+.pause-mobile{
+  display: block;
+}
+.dice{
+  width: 4rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  position: absolute;
+  bottom: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  transition: box-shadow 0.5s ease-in-out;
+}
+
+.dice:hover,
+.dice:focus{
+  box-shadow:  0 0 25px 15px hsl(var(--clr-green)/.3);
+}
+
+@media screen and (min-width: 54em){
+  .quote{
+    max-width: 25ch;   
+  }
+  .pause-mobile{
+    display: none;
+  }
+  .pause-desktop{
+    display: block;
+  }
+}
+
