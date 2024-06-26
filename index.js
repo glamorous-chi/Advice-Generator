@@ -1,6 +1,6 @@
-const dieToss = document.getElementById("dice");
-const adviceId = document.getElementById("advice-id");
-const adviceText = document.getElementById("advice-text");
+const dieToss = document.querySelector("#dice");
+const adviceId = document.querySelector("#advice-id");
+const adviceText = document.querySelector("#advice-text");
 
 dieToss.addEventListener("click", async () => {
   const apiUrl = "https://api.adviceslip.com/advice";
