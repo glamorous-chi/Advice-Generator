@@ -1,4 +1,4 @@
-# Frontend Mentor - Advice generator app solution
+# TSA Online Internship Challenge One
 
 ## Welcome! 👋
 
